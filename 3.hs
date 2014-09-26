@@ -1,5 +1,5 @@
-element2 str x acc = if (x == acc)
+elementAt str x acc = if (x == acc)
                 then (tail str) !! 0
-                else (element2 (tail str) (succ acc) )
+                else (elementAt (tail str) x (succ acc) )
 
-main = print (element2 "This is a test string." 2 0)
+main = print (elementAt "This is a test string." 2 2)
